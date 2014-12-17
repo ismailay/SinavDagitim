@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B570463-C93C-4A33-8EE5-C7DDB84F3676}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SinavT</RootNamespace>
+    <AssemblyName>SinavTakipPro</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>display.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\bosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\sinavDataSet.cs">
+      <DependentUpon>sinavDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\sinavDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sinavDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\yedeklerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yedeklerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarsafListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarsafListe.Designer.cs">
+      <DependentUpon>CarsafListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetCarsafTablo.cs">
+      <DependentUpon>DataSetCarsafTablo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetCarsafTablo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCarsafTablo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetOgretmenElProgrami.cs">
+      <DependentUpon>DataSetOgretmenElProgrami.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetOgretmenElProgrami.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOgretmenElProgrami.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetSinavaGirmesiGerekenler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSinavaGirmesiGerekenler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUcret.cs">
+      <DependentUpon>DataSetUcret.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetUcret.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUcret.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ders.Designer.cs">
+      <DependentUpon>Ders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevDagilimGozcu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GorevDagilimGozcu.Designer.cs">
+      <DependentUpon>GorevDagilimGozcu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevDagilimiDers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GorevDagilimiDers.Designer.cs">
+      <DependentUpon>GorevDagilimiDers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevDagilimiElle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GorevDagilimiElle.Designer.cs">
+      <DependentUpon>GorevDagilimiElle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevDagilimiOtomatik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GorevDagilimiOtomatik.Designer.cs">
+      <DependentUpon>GorevDagilimiOtomatik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevDagilimKomisyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GorevDagilimKomisyon.Designer.cs">
+      <DependentUpon>GorevDagilimKomisyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gorev_Iptl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gorev_Iptl.Designer.cs">
+      <DependentUpon>Gorev_Iptl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakkinda.Designer.cs">
+      <DependentUpon>Hakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImzaCetveli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImzaCetveli.Designer.cs">
+      <DependentUpon>ImzaCetveli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImzaCetveliRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImzaCetveliRapor.Designer.cs">
+      <DependentUpon>ImzaCetveliRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nobetc_Ogretmen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nobetc_Ogretmen.Designer.cs">
+      <DependentUpon>Nobetc_Ogretmen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciDersAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciDersAtama.Designer.cs">
+      <DependentUpon>OgrenciDersAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogretmen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogretmen.Designer.cs">
+      <DependentUpon>Ogretmen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenElProgm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretmenElProgm.Designer.cs">
+      <DependentUpon>OgretmenElProgm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenElProgramiRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretmenElProgramiRapor.Designer.cs">
+      <DependentUpon>OgretmenElProgramiRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogrnci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrnci.Designer.cs">
+      <DependentUpon>Ogrnci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarsafListe.resx">
+      <DependentUpon>CarsafListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ders.resx">
+      <DependentUpon>Ders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevDagilimGozcu.resx">
+      <DependentUpon>GorevDagilimGozcu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevDagilimiDers.resx">
+      <DependentUpon>GorevDagilimiDers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevDagilimiElle.resx">
+      <DependentUpon>GorevDagilimiElle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevDagilimiOtomatik.resx">
+      <DependentUpon>GorevDagilimiOtomatik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevDagilimKomisyon.resx">
+      <DependentUpon>GorevDagilimKomisyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gorev_Iptl.resx">
+      <DependentUpon>Gorev_Iptl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakkinda.resx">
+      <DependentUpon>Hakkinda.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImzaCetveli.resx">
+      <DependentUpon>ImzaCetveli.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImzaCetveliRapor.resx">
+      <DependentUpon>ImzaCetveliRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nobetc_Ogretmen.resx">
+      <DependentUpon>Nobetc_Ogretmen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciDersAtama.resx">
+      <DependentUpon>OgrenciDersAtama.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogretmen.resx">
+      <DependentUpon>Ogretmen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretmenElProgm.resx">
+      <DependentUpon>OgretmenElProgm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretmenElProgramiRapor.resx">
+      <DependentUpon>OgretmenElProgramiRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogrnci.resx">
+      <DependentUpon>Ogrnci.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\CarsafTabloRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CarsafTabloRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\ImzaCetveliRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ImzaCetveliRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\OgretmenElProgramiRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OgretmenElProgramiRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\SinavaGirmesiGerekenlerRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SinavaGirmesiGerekenlerRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\SinavIlanCizelgesiRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SinavIlanCizelgesiRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\UcretCizelgesiRaporTasarim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UcretCizelgesiRaporTasarim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saat.resx">
+      <DependentUpon>Saat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SabitBlgler.resx">
+      <DependentUpon>SabitBlgler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavaGirmesiGerekenlerRapor.resx">
+      <DependentUpon>SinavaGirmesiGerekenlerRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavDegsklik.resx">
+      <DependentUpon>SinavDegsklik.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavGreviIslemlri.resx">
+      <DependentUpon>SinavGreviIslemlri.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavIlanCizelgsi.resx">
+      <DependentUpon>SinavIlanCizelgsi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavIlanCizelgsiRapor.resx">
+      <DependentUpon>SinavIlanCizelgsiRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sinav_Iptl.resx">
+      <DependentUpon>Sinav_Iptl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinifBilgileri.resx">
+      <DependentUpon>SinifBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcretCizelgesi.resx">
+      <DependentUpon>UcretCizelgesi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcretCizelgesiRapor.resx">
+      <DependentUpon>UcretCizelgesiRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YedkAlma.resx">
+      <DependentUpon>YedkAlma.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniSnvDnemi.resx">
+      <DependentUpon>YeniSnvDnemi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZamanCizelgesi.resx">
+      <DependentUpon>ZamanCizelgesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\bosDataSet.xsc">
+      <DependentUpon>bosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\bosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\bosDataSet.xss">
+      <DependentUpon>bosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\sinavDataSet.xsc">
+      <DependentUpon>sinavDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\sinavDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sinavDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\sinavDataSet.xss">
+      <DependentUpon>sinavDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\yedeklerDataSet.xsc">
+      <DependentUpon>yedeklerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\yedeklerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yedeklerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\yedeklerDataSet.xss">
+      <DependentUpon>yedeklerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSetCarsafTablo.xsc">
+      <DependentUpon>DataSetCarsafTablo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCarsafTablo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCarsafTablo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCarsafTablo.xss">
+      <DependentUpon>DataSetCarsafTablo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOgretmenElProgrami.xsc">
+      <DependentUpon>DataSetOgretmenElProgrami.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOgretmenElProgrami.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOgretmenElProgrami.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetOgretmenElProgrami.xss">
+      <DependentUpon>DataSetOgretmenElProgrami.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSinavaGirmesiGerekenler.xsc">
+      <DependentUpon>DataSetSinavaGirmesiGerekenler.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSinavaGirmesiGerekenler.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSinavaGirmesiGerekenler.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetSinavaGirmesiGerekenler.xss">
+      <DependentUpon>DataSetSinavaGirmesiGerekenler.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUcret.xsc">
+      <DependentUpon>DataSetUcret.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUcret.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUcret.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetUcret.xss">
+      <DependentUpon>DataSetUcret.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Raporlar\CarsafTabloRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarsafTabloRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\ImzaCetveliRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImzaCetveliRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\OgretmenElProgramiRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OgretmenElProgramiRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\SinavaGirmesiGerekenlerRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinavaGirmesiGerekenlerRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\SinavIlanCizelgesiRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinavIlanCizelgesiRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\UcretCizelgesiRaporTasarim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UcretCizelgesiRaporTasarim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Saat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saat.Designer.cs">
+      <DependentUpon>Saat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SabitBlgler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SabitBlgler.Designer.cs">
+      <DependentUpon>SabitBlgler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavaGirmesiGerekenlerRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavaGirmesiGerekenlerRapor.Designer.cs">
+      <DependentUpon>SinavaGirmesiGerekenlerRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavDegsklik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavDegsklik.Designer.cs">
+      <DependentUpon>SinavDegsklik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavGreviIslemlri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavGreviIslemlri.Designer.cs">
+      <DependentUpon>SinavGreviIslemlri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavIlanCizelgsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavIlanCizelgsi.Designer.cs">
+      <DependentUpon>SinavIlanCizelgsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavIlanCizelgsiRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavIlanCizelgsiRapor.Designer.cs">
+      <DependentUpon>SinavIlanCizelgsiRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sinav_Iptl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sinav_Iptl.Designer.cs">
+      <DependentUpon>Sinav_Iptl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinifBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinifBilgileri.Designer.cs">
+      <DependentUpon>SinifBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcretCizelgesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UcretCizelgesi.Designer.cs">
+      <DependentUpon>UcretCizelgesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcretCizelgesiRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UcretCizelgesiRapor.Designer.cs">
+      <DependentUpon>UcretCizelgesiRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YedkAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YedkAlma.Designer.cs">
+      <DependentUpon>YedkAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeniSnvDnemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniSnvDnemi.Designer.cs">
+      <DependentUpon>YeniSnvDnemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZamanCizelgesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZamanCizelgesi.Designer.cs">
+      <DependentUpon>ZamanCizelgesi.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\yedekler.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\yedek\bos.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\sinav.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="display.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\DAL.csproj">
+      <Project>{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Model.csproj">
+      <Project>{C7079FA1-634A-480A-9C88-7644BE5CEB0A}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

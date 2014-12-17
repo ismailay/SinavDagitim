@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{C7079FA1-634A-480A-9C88-7644BE5CEB0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinavT", "SinavT\SinavT\SinavT.csproj", "{1B570463-C93C-4A33-8EE5-C7DDB84F3676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DFBC4C8-128E-49E7-80A3-19FA5FF92326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7079FA1-634A-480A-9C88-7644BE5CEB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7079FA1-634A-480A-9C88-7644BE5CEB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7079FA1-634A-480A-9C88-7644BE5CEB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7079FA1-634A-480A-9C88-7644BE5CEB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B570463-C93C-4A33-8EE5-C7DDB84F3676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B570463-C93C-4A33-8EE5-C7DDB84F3676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B570463-C93C-4A33-8EE5-C7DDB84F3676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B570463-C93C-4A33-8EE5-C7DDB84F3676}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
